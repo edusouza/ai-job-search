@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Eduardo Oliveira de Souza
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Eduardo Oliveira de Souza, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,113 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+Full detail lives in `.claude/skills/job-application-assistant/01-candidate-profile.md`.
+This is the summary Claude loads every session.
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Eduardo Oliveira de Souza
+- **Location:** Curitiba, Parana, Brazil (UTC-3). **Fully remote only** - not relocating.
+- **Phone:** +55 (41) 99699-2634
+- **Email:** souza.eduardo@gmail.com
+- **LinkedIn:** linkedin.com/in/eduardosouza | **GitHub:** github.com/edusouza | **Blog:** blog.eduardosouza.me
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | Portuguese | Native |
+  | English | Full professional proficiency |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Open to opportunities. Left Contabilizei March 2026; building independently with AI tooling since.
+- **LinkedIn headline:** "Senior/Staff Software Engineer | AI-Augmented Development | Kotlin, Java, GCP, Kubernetes"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Specialization in Digital Marketing** (2011-2012) - Universidade Federal do Parana (UFPR), Curitiba
+- **BSc in Computer Science** (2001-2005) - Universidade Federal de Mato Grosso do Sul (UFMS), Campo Grande
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Growth arc:** joined Contabilizei Jan 2015 at under 100 customers; the company publicly passed
+  **100,000 clients in Dec 2025** while he was there (~1,100x), with four internal promotions.
+  Strongest available framing. Never claim the title "Founding Engineer" - founded 2013, he
+  joined 2015. See "Growth arc" in `01-candidate-profile.md`.
+- **"No benchmark" story:** from 2015 until Integra Contador launched (26 Sep 2022), Brazil had
+  **no tax-compliance API** - he built it as browser automation against human-only government
+  sites, to financial-grade correctness. Strongest technical differentiator; lead with the
+  constraint, not "scraping". See `01-candidate-profile.md`.
+  **Never write about the CAPTCHA/proxy countermeasures** - honest if asked, never on paper.
+- **Certificate custody (2018):** the Soluti/ICP-Brasil A1 integration = holding thousands of
+  customers' private signing keys with legal authority, mandatory for SPED/ECD filing. Frame as
+  key management + compliance, not "a CA integration".
+- **Pix failover (Jul 2025):** after the C&M Software breach the Central Bank suspended
+  Transfeera (his Pix provider) from Pix; he extended an existing Banco do Brasil contract and
+  built an anti-corruption layer to swap providers under a live product. **Transfeera was NOT
+  breached** - it was precautionarily suspended and said so publicly; never imply otherwise.
+- **Especialista de Tecnologia Senior / Staff Engineer** (Sep 2021 - Mar 2026) - **Contabilizei** (Curitiba)
+  - Drove AI-assisted development across 10+ teams through influence, not mandate: cycle time ~14 to ~4 days (-70%), throughput 2-3x
+  - Built an internal AI code review tool solo: 100+ repos, 5,000+ suggestions, ~25x cheaper per user than the commercial option
+  - Led the enterprise auth migration to Keycloak IAM (10 teams, 15 modules, ~1,000 users) in 3 months with zero downtime and zero security incidents, after prior attempts had failed
+  - Led technical strategy for the BS2 digital banking platform: Pix, account opening, reconciliation, compliance
+- **Full Stack Engineer / Tech Lead** (Jan 2015 - Oct 2021) - **Contabilizei** (Curitiba)
+  - CobrePJ billing platform (Pix, card, boleto) with in-house anti-fraud; ~20% customer-base adoption
+  - Automatic tax payment product generating BRL 200K+ monthly in operation fees; tax installment product shipped in under 2 months, 50,000+ payments processed
+  - Led Kubernetes adoption and the company's first cluster; built the e-CNPJ certificate platform
+- **Innovation Analyst** (Feb 2013 - Dec 2014) and **Programmer** (Aug 2010 - Feb 2013) - **Zenite Informacao e Consultoria S.A.** (Curitiba)
+- **Software Developer** (Jan 2008 - Aug 2010) - **TecSinapse** (Sao Paulo)
+- **Trainee and junior roles** (2003 - 2007) - basis for the "20+ years" figure; no employer detail on record
+
+### Independent Projects (Mar 2026 - present)
+- **ai-code-reviewer** (public, Python) - AI code review for GitHub/GitLab/Bitbucket; open-source counterpart to the internal Contabilizei tool
+- **edusouza-plugins** (public) - Claude Code plugin marketplace: memory, TDD workflows, issue ops, context docs
+- **nfse-emissor-go** (public, Go); plus private TypeScript/Python/Astro projects (markurl, interview-simulator, seguro-ai, catalogo)
+
+> **Tenure: three separate numbers.** 20+ years engineering (from 2003); **11 years at
+> Contabilizei** (Jan 2015 - Mar 2026, company tenure); **~6 years fintech/payments, from late
+> 2019** - Contabilizei is an *accountancy* company and only added financial services at the end
+> of 2019. **Never count fintech years from the 2015 start date** (miscounted twice already).
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Kotlin, Java (20+ yrs), Spring Boot/WebFlux, microservices, event-driven architecture, DDD, GCP, Kubernetes, Docker, PostgreSQL, Pub/Sub, BigQuery, REST/OpenAPI
+- **Secondary:** Python, TypeScript, Go, Scala, Redis, Dataflow/Apache Beam, Cloudflare Workers, Keycloak/OIDC
+- **Domain:** FinTech and payments (Pix, boleto, card, acquirers, reconciliation, anti-fraud, KYC/KYB), Brazilian tax and fiscal compliance, digital banking, regulatory compliance
+- **AI tooling:** Claude Code, GitHub Copilot, Cursor; Spec-Driven Development, Context Engineering, Specialist Agents; LLM integration and agent tooling at organizational scale
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Oracle Certified Professional, Java SE 6 Programmer** - Oracle
+- **Scala & Functional Programming for Beginners** - Rock the JVM
+- **Software Architecture: Domain-Driven Design**; **The Gradle Masterclass**
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+None recorded.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+*Inferred from documents, not a formal assessment. See `02-behavioral-profile.md`.*
+- **Influence without authority** - drove 10-team AI adoption with no title or mandate
+- **Risk-managed delivery** - rejected a big-bang cutover for phased canary migration
+- **Consensus-builder** - week-long working group before committing to Keycloak
+- **Teacher** - mentoring recurs in every document across every role
+- **Strengths:** organizational impact with hard numbers; deep fintech and distributed-systems experience; early adoption then diffusion
+- **Growth areas:** JVM-primary stack (other languages recent); 11 years at one company; no formal management experience
+- **Thrives in:** hands-on IC ownership, cross-functional access, autonomy with measurable outcomes, fully remote
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Owning systems end to end, from customer problem to production outcome
+- AI-assisted development applied to real production backend work
+- Hard migration and modernization problems with real reliability constraints
+- Payments and financial correctness
+- Building developer tooling; mentoring and enablement
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **FinTech / payments infrastructure:** Lithic, Alpaca, Sardine, Moov, Valon, Alternative Payments, Pulley
+- **AI / developer tooling:** CrewAI and similar
+- **Large-scale product and consultancy:** Agoda, Amazon, Thoughtworks
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- **Not fully remote** - onsite or hybrid outside Curitiba, or any role requiring relocation
+- **Remote postings that exclude Brazil** - "remote (US only)" and similar; check hiring-location wording verbatim
+- **People-management track** - seeking IC/staff technical ownership, explicitly not line management
+- Sustained working hours outside roughly 06:00-20:00 UTC-3 (US/EU overlap fine, APAC-anchored is not)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

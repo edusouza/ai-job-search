@@ -1,10 +1,16 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Eduardo Oliveira de Souza
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
+%%
+%% NOTE: this master file deliberately runs longer than 2 pages - it is the source
+%% pool, not a submission. Tailored CVs (cv/main_<company>_<role>.tex) must be cut
+%% to exactly 2 pages per 05-cv-templates.md.
+%%
+%% Date fields use SINGLE ASCII hyphens (2015-2021, not 2015--2021) because `--`
+%% renders as an en-dash that many ATS parsers fail to read as a range.
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
@@ -13,8 +19,8 @@
 % Force both first and last name AND section headings to render in moderncv
 % blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
 % looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
@@ -24,18 +30,19 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Eduardo Oliveira de Souza - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
+\usepackage{needspace}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Eduardo}{Oliveira de Souza}
+\address{Curitiba, Paran\'a, Brazil}{}{}
+\phone[mobile]{+55 (41) 99699-2634}
+\email{souza.eduardo@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/eduardosouza}{LinkedIn}, \href{https://github.com/edusouza}{GitHub}, \href{https://blog.eduardosouza.me}{Blog}}
 
 \begin{document}
 
@@ -46,7 +53,16 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Senior/Staff Software Engineer with 20+ years building and scaling backend systems, the
+last six focused on payments and financial infrastructure, built on a decade of regulated tax and
+fiscal compliance work. Joined Contabilizei at under 100 customers and helped scale
+the platform past 100,000, through every architecture inflection from monolith to distributed
+microservices on Kubernetes. Built Brazil's tax compliance automation for seven years before any
+government API existed, and led the architecture of a digital banking platform with BS2 Bank
+covering Pix payments, corporate account opening, reconciliation, and compliance. Drove
+AI-augmented development adoption across 10+ engineering teams, cutting cycle time from
+$\sim$14 to $\sim$4 days. Expert in Kotlin and Java, microservices and event-driven
+architecture, and cloud-native delivery on GCP and Kubernetes.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +72,19 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Languages \& Frameworks}: Java (20+ years), Kotlin, Python, TypeScript, Go, Scala; Spring Boot, Spring WebFlux, Hibernate.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Distributed Systems \& Architecture}: Microservices, event-driven architecture, Domain-Driven Design, CQRS, anti-corruption layers, API gateway patterns, zero-downtime deployments, incremental migration strategies, third-party provider failover and redundancy, legacy system integration.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Cloud \& Infrastructure}: Google Cloud Platform, Kubernetes, Docker, App Engine, container orchestration, auto-scaling, PaaS (Deis Workflow), DevOps.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Data \& Messaging}: PostgreSQL, Redis, NoSQL, Google BigQuery, Google Pub/Sub, Google Dataflow, Apache Beam, REST APIs, OpenAPI/Swagger.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{AI-Augmented Development}: Claude Code, GitHub Copilot, Cursor; Spec-Driven Development (SDD), Context Engineering, Specialist Agents; LLM integration and agent tooling; organization-scale adoption and enablement.
+
+\item \textbf{Security \& Compliance}: Keycloak, OIDC/OAuth2, centralized IAM, cryptographic signing, key management and custody (Google Cloud KMS, envelope encryption), ICP-Brasil digital certificates, regulatory audit and compliance deadlines.
+
+\item \textbf{FinTech Domain}: Pix, boleto, card payments, acquirer and banking integrations (Adyen, Transfeera, Iugu, Banco do Brasil, BS2), reconciliation, anti-fraud, KYC/KYB, Brazilian tax and fiscal compliance.
 
 \end{itemize}
 
@@ -72,37 +92,93 @@
 %     PROFESSIONAL EXPERIENCE
 % ============================================================
 
+\needspace{9\baselineskip}
 \section{Professional Experience}
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Contabilizei, Staff level ---
+\needspace{5\baselineskip}
+\item{\cventry{2021-2026}{Especialista de Tecnologia S\^enior (Staff Engineer)}{Contabilizei}{Curitiba, Brazil}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Fourth level reached at Contabilizei across 11 years (Full Stack Engineer 2015; Especialista de Tecnologia 2020; Especialista de Tecnologia I 2021; S\^enior 2021), spanning the company's growth from under 100 customers to over 100,000.
+    \item Drove AI-assisted development adoption across 10+ engineering teams through influence rather than formal mandate, reducing cycle time from $\sim$14 to $\sim$4 days (-70\%) and increasing throughput 2-3x, measured across the 10 tracked teams.
+    \item Designed and built solo an internal AI-powered code review tool integrated with GitLab: adopted in 100+ repositories, 50 users, 5,000+ suggestions generated, at $\sim$25x lower cost per user than the commercial alternative.
+    \item Led the enterprise authentication migration from a legacy custom system to Keycloak-based centralized IAM across 10 teams, 15 modules, and $\sim$1,000 users, after multiple prior attempts had failed. Rejected a big-bang cutover for a phased 3-month migration using traffic splitting and canary releases against production traffic: zero downtime, zero security incidents, compliance deadline met, and auth latency reduced from $\sim$20s to $<$5s.
+    \item Restored Pix payments for the CobrePJ billing product after Brazil's Central Bank precautionarily suspended its payment provider from the Pix network during the July 2025 C\&M Software security incident. Extended an existing Banco do Brasil contract to cover Pix transfers and built an \textbf{anti-corruption layer} translating the product's existing provider-shaped requests to Banco do Brasil, swapping the payment provider beneath a live product without changing its callers. Delivered solo in \textbf{2 weeks} using \textbf{Claude Code} and GitHub Copilot with personal verification of all generated code, while the finance team processed payments manually so customers saw no interruption. The failover path was retained: CobrePJ now runs \textbf{two Pix providers} in production.
+    \item Led technical strategy and architecture for the digital banking platform built with BS2 Bank: corporate account opening, Pix payments, international accounts, automated reconciliation, and scheduled tax payments.
+    \item Codified Spec-Driven Development, Context Engineering, and Specialist Agents into company engineering practice; mentored and trained dozens of engineers.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Contabilizei, Full Stack / Tech Lead ---
+\needspace{5\baselineskip}
+\item{\cventry{2015-2021}{Full Stack Engineer / Tech Lead}{Contabilizei}{Curitiba, Brazil}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Led design and delivery of \textbf{CobrePJ}, a billing platform supporting Pix, card, and boleto with configurable fees, automatic overdue interest, and recurring reminders, plus an in-house anti-fraud module routing suspicious cases to the fraud team. Integrated Adyen, Transfeera, and Iugu. Adopted by $\sim$20\% of the customer base.
+    \item Built an \textbf{automatic tax payment} product end to end, scheduling payment via direct debit or credit card immediately after tax calculation. Generated over BRL 200K monthly in operation fees.
+    \item Delivered a \textbf{tax installment} product allowing payment in up to 12 credit-card installments, including the financing structure with a banking partner that absorbed the credit risk. Shipped in under 2 months during the pandemic; 50,000+ tax payments processed.
+    \item Led Kubernetes adoption and cloud migration, implementing the company's first cluster and a PaaS solution with zero-downtime deploys and horizontal scaling.
+    \item Built Brazil's tax compliance automation (Simples Nacional, GPS, DARF) with \textbf{no government API available}: until Receita Federal launched Integra Contador in late 2022, every fiscal system was built for human operators and the accounting ledger was a physical book. Delivered financial-grade correctness -- right amounts, statutory deadlines, no silent failures -- on third-party systems with no contract, SLA, or change notice, monitored by alerting on automation error rates so a changed government page was caught before it could produce an incorrect filing.
+    \item Built the \textbf{digital certificate issuance and custody platform} integrated with the Soluti certification authority. An ICP-Brasil signature is the only authentication SPED/ECD accepts, so every customer required a certificate before any filing could be made. Held thousands of customers' private signing keys, carrying legally binding signature authority, under \textbf{Google Cloud KMS with application-level encryption} (envelope encryption: no plaintext keys at rest, root key access-controlled independently of the application), including the annual renewal lifecycle.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Zenite, Innovation Analyst ---
+\needspace{4\baselineskip}
+\item{\cventry{2013-2014}{Innovation Analyst}{Z\^enite Informa\c{c}\~ao e Consultoria S.A.}{Curitiba, Brazil}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Initiated a public procurement data extraction and classification project, building a repository for price and supplier analysis across national government bids.
+    \item Led the company's cloud migration, improving deployment agility and reducing operating cost.
 \end{itemize}}}
+
+\vspace{3pt}
+
+% --- Zenite, Programmer ---
+\needspace{4\baselineskip}
+\item{\cventry{2010-2013}{Programmer}{Z\^enite Informa\c{c}\~ao e Consultoria S.A.}{Curitiba, Brazil}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built LeiAnotada.com, a legal enrichment platform with high-performance full-text search over Brazilian public procurement legislation.
+    \item Built WebZ\^enite, an online legal library with extensible document-type architecture and multi-dimensional metadata search.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- TecSinapse ---
+\needspace{4\baselineskip}
+\item{\cventry{2008-2010}{Software Developer}{TecSinapse}{S\~ao Paulo, Brazil}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built a PowerPoint generator driven by performance dashboards, and a price and stock extraction crawler for a multinational electronics client.
+    \item Built an XML-configurable after-sales system for automakers, removing the need to code each new workflow.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Early career ---
+\needspace{3\baselineskip}
+\item{\cventry{2003-2007}{Trainee and Junior Developer roles}{}{Brazil}{}{\vspace{1pt}
+Entry-level software development positions.
+}}
+
+\end{itemize}
+
+% ============================================================
+%     INDEPENDENT PROJECTS
+% ============================================================
+
+\section{Independent Projects}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{\href{https://github.com/edusouza/ai-code-reviewer}{ai-code-reviewer}} (Python): AI-powered code review system for GitHub, GitLab, and Bitbucket. Open-source counterpart to the internal review tool built at Contabilizei.
+
+\item \textbf{\href{https://github.com/edusouza/edusouza-plugins}{edusouza-plugins}}: a Claude Code plugin marketplace covering cross-session memory, TDD delivery workflows, GitHub issue ops, and context documentation.
+
+\item \textbf{\href{https://github.com/edusouza/nfse-emissor-go}{nfse-emissor-go}} (Go): NFS-e electronic invoice emission core.
+
+\item Additional private projects since March 2026 in TypeScript, Python, and Astro/Cloudflare Workers, spanning LLM integrations and developer tooling.
 
 \end{itemize}
 
@@ -114,15 +190,13 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2011-2012}{Specialization in Digital Marketing}{Universidade Federal do Paran\'a (UFPR)}{Curitiba, Brazil}{}{\vspace{1pt}
+Marketing 2.0 and social media.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2001-2005}{BSc in Computer Science}{Universidade Federal de Mato Grosso do Sul (UFMS)}{Campo Grande, Brazil}{}{}}
 
 \end{itemize}
 
@@ -133,27 +207,19 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item Portuguese (native), English (full professional proficiency).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     CERTIFICATIONS
 % ============================================================
 
-\section{Publications}
+\section{Certifications}
 \vspace{1pt}
 \begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{Oracle Certified Professional, Java SE 6 Programmer -- Oracle.}
+\item{Scala \& Functional Programming for Beginners -- Rock the JVM.}
+\item{Software Architecture: Domain-Driven Design; The Gradle Masterclass.}
 \end{itemize}
 
 % ============================================================
