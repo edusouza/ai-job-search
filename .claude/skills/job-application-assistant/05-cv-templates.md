@@ -32,8 +32,10 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 % Force both first and last name AND section headings to render in moderncv
 % blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
 % looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+% Name set at 28pt (not moderncv's 34pt) so "Eduardo Oliveira de Souza" fits on
+% one line - see "Never abbreviate the name to save space" below.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
@@ -43,18 +45,18 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Eduardo Oliveira de Souza - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.77]{geometry}
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\name{Eduardo}{Oliveira de Souza}
+\address{Curitiba, Paran\'a, Brazil}{}{}
+\phone[mobile]{+55 (41) 99699-2634}
+\email{souza.eduardo@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/eduardosouza}{LinkedIn}, \href{https://github.com/edusouza}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -73,6 +75,31 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 ### Color overrides
 
 The three `\renewcommand*` lines in the preamble are required on lualatex+MiKTeX. Without them the firstname, lastname, and section headings render in black even though `\moderncvcolor{blue}` is set, which looks inconsistent with the rest of the blue accent scheme (links, bullet markers, contact icons). The override forces all three to use `color1` (moderncv's accent colour, which becomes blue under `\moderncvcolor{blue}`). Both names render bold; if you prefer the firstname in regular weight, change the firstnamestyle override from `\bfseries` to `\mdseries`. Don't drop the override - on most modern installs the defaults render visibly wrong.
+
+### Never abbreviate the name to save space
+
+At moderncv's default 34pt, `\name{Eduardo}{Oliveira de Souza}` wraps to two lines
+("Eduardo Oliveira de" / "Souza"). The tempting fix is to abbreviate the middle name
+("Eduardo O. de Souza"). **Don't.** It buys roughly one line of a two-page document, and it
+costs two real things:
+
+1. **ATS name parsing.** Tracking systems split the name into first/middle/last. An initial
+   where a parser expects a token produces inconsistent results: some store the surname as
+   "de Souza", others as "Souza", others push "O." into a middle-name field and mangle the
+   rest. Full text parses more predictably. "Oliveira de Souza" is also a compound surname by
+   Brazilian convention, so abbreviating its first element is the less conventional choice.
+2. **Cross-document consistency.** The cover letter header, the `\signature{}` block, LinkedIn
+   (`/in/eduardosouza`), and GitHub all carry the full name. A recruiter cross-referencing an
+   abbreviated CV against a full-name profile hits friction for no gain.
+
+**The correct fix is typographic:** the preamble sets the name at **28pt**, which fits
+"Eduardo Oliveira de Souza" on one line at full length. This is already in the template above
+and in `cv/main_example.tex` - do not revert it to 34pt.
+
+If the header still needs to shrink, cut in this order instead, never the name:
+1. Drop the **Blog** link from `\extrainfo` (three links is one more than most readers click).
+2. Drop `\address{...}` - though keep it when remote-from-Brazil is context a reader wants
+   immediately, which is most of the time.
 
 ### Spacing inside itemize lists (important)
 
@@ -115,12 +142,39 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For fintech / payments / distributed-systems backend roles:** *[Used for: sardine_staff-engineer]*
+> Senior/Staff Software Engineer with 20+ years building and scaling backend systems, with deep
+> focus on financial technology. Led the architecture and technical strategy of a digital
+> banking platform built in partnership with BS2 Bank, covering Pix payments, corporate account
+> opening, reconciliation, and compliance. Built billing, anti-fraud, and tax payment products
+> integrating Adyen, Transfeera, Iugu, and Banco do Brasil, processing 50,000+ tax payments and
+> generating BRL 200K+ monthly in operation fees. Expert in Kotlin and Java, microservices and
+> event-driven architecture, and cloud-native delivery on GCP and Kubernetes.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For AI-augmented development / developer-experience / platform roles:** *[Used for: crewai_staff-engineer]*
+> Staff-level Software Engineer with 20+ years in distributed systems, now focused on
+> AI-assisted software development. Drove AI-augmented development adoption across 10+
+> engineering teams through influence rather than mandate, cutting cycle time from ~14 to ~4
+> days and roughly doubling to tripling throughput. Designed and built an internal AI code
+> review tool adopted across 100+ repositories at roughly 25x lower cost per user than the
+> commercial alternative, and has since built open-source AI developer tooling independently.
+> Combines organizational enablement with hands-on backend depth in Kotlin, Java, and Python.
+
+**For platform modernization / migration / reliability roles:**
+> Senior/Staff Software Engineer with 20+ years delivering backend systems under real
+> reliability constraints. Led an enterprise authentication migration across 10 teams, 15
+> modules, and ~1,000 users after multiple prior attempts had failed, rejecting a big-bang
+> cutover in favour of a phased 3-month migration with traffic splitting and canary releases
+> against production traffic: zero downtime, zero security incidents, compliance deadline met,
+> and a 4x improvement in authentication latency. Deep experience with Kotlin, Java,
+> Kubernetes, and GCP, and with introducing durable architectural standards across an
+> engineering organization.
+
+**Grounding note.** All three statements were verified against `01-candidate-profile.md`
+during `/setup` Path A. The archived Alpaca-derived phrasing was **not** carried over: its
+"millions of dollars in transactions daily" and "Brazil's first integrated digital banking
+solution" claims are unsupported. The verified market-first claim, if a letter needs it, is
+narrower and attributed - see "Verified Company Claims" in `01-candidate-profile.md`.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

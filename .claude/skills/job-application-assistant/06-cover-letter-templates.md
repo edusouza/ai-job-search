@@ -76,7 +76,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR_NAME]}}{  \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} | [YOUR_PHONE] |  \urlstyle{same}\href{[YOUR_LINKEDIN_URL]}{LinkedIn}
+\namesection{}{\Huge{Eduardo Oliveira de Souza}}{  \href{mailto:souza.eduardo@gmail.com}{souza.eduardo@gmail.com} | +55 (41) 99699-2634 |  \urlstyle{same}\href{https://www.linkedin.com/in/eduardosouza}{LinkedIn}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,7 +108,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 % doubled break triggers "! LaTeX Error: There's no line here to end."
 \closing{Kind regards,}
 
-\signature{[YOUR_NAME]}
+\signature{Eduardo Oliveira de Souza}
 \end{flushright}
 \end{document}
 ```
@@ -168,6 +168,49 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - [ ] Language matches the job posting language
 - [ ] Salutation is appropriate (named person if possible)
 - [ ] Headline is engaging and specific, not generic
+
+## Structures Observed in Past Applications
+
+Extracted by `/setup` Path A from archived letters in `documents/applications/`. Structural
+patterns only; see `03-writing-style.md` for the prose-level observations, and note that the
+archived letters predate this framework's one-page rule.
+
+### The four-paragraph structure (preferred - Agoda)
+The tightest archived letter, and the one that actually fits a page:
+1. **Hook + role**: a specific, verifiable reference (a named person's post, a product launch) plus the role being applied for, and the headline experience figure.
+2. **Domain proof**: the single most relevant past project, named, with the technologies and the scale that make it credible.
+3. **Differentiator**: what is brought beyond shipping features, with a number attached.
+4. **Logistics + close**: working arrangement, availability, thanks.
+
+This maps cleanly onto the `\lettercontent{}` blocks in the template above, with no bullet
+list needed. Prefer it when the posting is straightforward.
+
+### The labelled-bullet structure (Lithic, Alpaca, Pulley)
+Used when a posting enumerates distinct responsibility areas worth answering point by point:
+- Opening paragraph naming role and company.
+- A "Why I'm the right fit for [Company]'s [Team]" heading.
+- 3-5 bullets with **bold category labels borrowed from the posting's own vocabulary**
+  (e.g. **Card and Account Lifecycle Management**, **Payment Processing Infrastructure**),
+  each pairing a concrete past system with the responsibility it maps to.
+- A short paragraph naming any technology gap and bridging from fundamentals.
+- A "why this company" paragraph referencing something specific and verified.
+- Close.
+
+**Budget warning:** the archived versions of this structure run to two pages. Keeping it to
+one page means **3 bullets, not 5**, and cutting either the gap paragraph or the company
+paragraph, not both. If both are essential, use the four-paragraph structure instead and work
+the mapping into prose.
+
+### Openers worth reusing
+- Named-source hook (Agoda): *"I came across [name]'s post about the engineering opportunities
+  at [company], and I'm excited to apply for..."* - use whenever a real referral or post exists.
+- Mission-echo (Pulley): opens on the company's stated mission and connects it to a career-long
+  through-line. Works when the mission genuinely matches; reads as filler when it does not.
+
+### Closers worth reusing
+- Logistics-forward (Agoda): states the working arrangement sought, then offers to walk through
+  the mapping. Useful given the fully-remote requirement, which is better surfaced early than
+  discovered late.
 
 ## Submission Guidelines (Best Practice)
 - Submit only the documents the employer requests

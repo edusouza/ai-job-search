@@ -60,9 +60,20 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Java and Kotlin backend; Spring Boot / WebFlux; microservices and
+event-driven architecture; Domain-Driven Design; GCP (Kubernetes, App Engine, Pub/Sub,
+BigQuery, Dataflow); PostgreSQL and Redis; REST/OpenAPI design; third-party and banking
+integrations; zero-downtime and incremental migration; IAM (Keycloak, OIDC); payments and
+fintech domain; AI-assisted development tooling and enablement.
+
+**Moderate match areas:** Python (AI tooling, shipped projects); TypeScript/JavaScript
+(recent independent projects); Go (one shipped project); Scala (coursework, not production);
+Cloudflare Workers; Apache Beam; data engineering; frontend work (dated - the Full Stack
+title is from 2015-2021).
+
+**Weak match areas:** C++/Rust; mobile (iOS/Android); AWS and Azure at depth (GCP is the
+deep cloud); ML/data science modelling as a core job (Udacity coursework only, ~2017);
+embedded and systems programming; formal people management.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -74,9 +85,17 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Senior/Staff backend engineering in fintech; payments and payment rails
+(Pix, boleto, card, acquirers); digital banking and corporate account opening; tax and fiscal
+compliance automation (Brazil); platform modernization and large migrations; developer
+tooling and developer experience; technical leadership without line management.
+
+**Moderate:** Platform/infrastructure engineering; data platform work (BigQuery, Dataflow,
+Beam); AI/LLM application engineering (strong recent independent work, but ~5 months of
+full-time focus rather than years); B2B SaaS outside fintech; solutions/consulting roles.
+
+**Entry-level:** Roles requiring formal engineering management; ML engineering or data science
+as the core function; frontend-led roles; non-JVM-primary systems roles (Rust, C++).
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,10 +110,26 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+
+Eduardo is in **Curitiba, Paraná, Brazil (UTC-3)** and is seeking **fully remote** work.
+Remote is the primary filter here, not commute distance.
+
+- Fully remote, hires in Brazil / contractors worldwide: **PASS**
+- Remote within Latin America or "remote - Americas": **PASS**
+- Remote but restricted to specific countries that exclude Brazil: **FAIL** (check the
+  posting's hiring-location wording carefully; "remote" often means "remote in the US")
+- Hybrid in Curitiba: **PASS** (feasible, though not the preference)
+- Hybrid or onsite anywhere else: **FAIL** (would require relocation)
+- Requires relocation: **FAIL**
+- Timezone requiring sustained overlap outside roughly 06:00-20:00 UTC-3: **FLAG**
+  (US and European overlap is comfortable; APAC-anchored hours are not)
+- Occasional international travel: **PASS**; frequent travel: **FLAG**
+
+**Check before scoring:** many "remote" postings are country-restricted, and many list a
+city as the office while hiring remotely. Read the hiring-location line verbatim, the same
+way the Eligibility Gate is applied. Work authorization for Brazil is not in question; the
+question is whether the employer can engage someone based in Brazil (direct employment,
+EOR, or contractor).
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -107,19 +142,36 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Senior/Staff individual-contributor engineering with deep technical ownership, explicitly
+  **not** a people-management track
+- Work at the intersection of AI-assisted development and production backend systems, building
+  on the organization-scale adoption record and the recent independent AI tooling projects
+- International remote work, applying fintech and distributed-systems depth beyond the
+  Brazilian market
+- Continued influence at organizational scale: architecture standards, developer experience,
+  mentoring - without line-management responsibility
 
-**Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+**Motivation filter:** Evaluate not just whether Eduardo *can* do the tasks, but whether the
+tasks will *energize* him.
+- **Tasks that energize:** owning a system end to end from customer problem to production
+  outcome; introducing a practice or technology and spreading it across teams; hard migration
+  and modernization problems with real reliability constraints; payments and financial
+  correctness; building developer tooling; mentoring and enablement; measurable impact
+  (cycle time, adoption, cost).
+- **Tasks that drain:** *[Inferred - not directly stated by Eduardo; confirm before weighting
+  heavily]* line management, performance reviews, hiring committees; maintenance-only mandates
+  with no room to change practice; environments where architecture is decided without engineer
+  input; work with no measurable outcome attached.
+- **Non-task factors:** leadership that engages on technical substance; autonomy over
+  approach; a culture that accepts incremental, risk-managed delivery.
 
-**Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+**Life situation alignment:**
+- **Security:** Left Contabilizei in March 2026 and has been building independently since.
+  Actively seeking a role. *[Salary baseline and financial runway not recorded - ask the user
+  before advising on negotiation or before ruling a role out on compensation.]*
+- **Flexibility:** Fully remote required. Based UTC-3; US and European overlap comfortable.
+- **Professional development:** Deepening AI/LLM engineering alongside the established
+  JVM/distributed-systems foundation; broadening beyond the JVM (Python, TypeScript, Go).
 
 ### 6. Salary Benchmark (Optional)
 
@@ -193,6 +245,29 @@ Present the evaluation as:
 - **Moderate Fit** (45-59): Consider carefully, discuss with user
 - **Weak Fit** (30-44): Probably skip unless strategic reasons
 - **Poor Fit** (<30): Skip
+
+## Calibration from Past Applications
+
+**Not calibrated.** `/setup` Path A found 11 archived applications in
+`documents/applications/` (agoda, alpaca, alternative payments, amazon, crewai, lithic, moov,
+pulley, sardine, thoughtworks, valon) but **no `outcome.md` files and only one
+`job_posting.md`** (amazon). Without outcome signal there is nothing to learn: it is not
+known which of these reached interview, offer, rejection, or no response.
+
+The scoring framework above is therefore **uncalibrated against real results** and rests on
+profile data alone. Treat its scores as a first approximation.
+
+**To calibrate:** add an `outcome.md` to each archived application folder recording status
+(`hired` / `offer_declined` / `rejected` / `no_response` / `interview_only` / `in_progress`),
+the stages reached, and any feedback. Then re-run `/setup`, which will read them and populate
+this section. Recording outcomes for new applications as they resolve is what makes this
+section useful over time.
+
+What the archive *does* show, without outcomes attached, is the target profile Eduardo has
+been aiming at: **senior/staff backend roles at fintech and infrastructure companies**
+(payments, cards, banking, brokerage, compliance) plus one AI-tooling company (crewai), one
+consultancy (thoughtworks), and one large-scale product company (agoda, amazon). Mostly US
+companies hiring remotely.
 
 ## Pre-Application: Call the Employer (Best Practice)
 

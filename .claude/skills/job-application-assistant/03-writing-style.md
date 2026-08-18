@@ -108,3 +108,48 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Patterns Observed in Past Applications
+
+Extracted by `/setup` Path A from archived cover letters in `documents/applications/`
+(Lithic, Alpaca, Pulley, Agoda). These are **observations**, not new rules; where an
+observation conflicts with the Critical Rules above, the Critical Rules win.
+
+### Keep: bold-label bullet blocks
+Three of four letters use a "Why I'm the right fit" heading followed by bullets with bold
+category labels mapping experience onto the posting's own areas. Example labels: **Card and
+Account Lifecycle Management**, **KYC/KYB Implementation**, **Payment Processing
+Infrastructure**, **API Design and Integration**. This scans well and mirrors the posting's
+vocabulary. Consistent with the Bullet Point Style rules above.
+
+### Keep: direct gap acknowledgement
+Each letter names a missing technology plainly and bridges from fundamentals rather than
+hiding it: Rust at Lithic, Go at Alpaca. The Lithic and Alpaca framing ("While my primary
+expertise is in Java and Kotlin, ...") is honest and passes the interview backtrack test.
+Keep doing this; now it can point at shipped Python/TypeScript/Go projects rather than intent.
+
+### Keep: named-source opening when one exists
+The Agoda letter opens by referencing a specific person's post about the opening. A concrete,
+verifiable hook beats a generic opener whenever one is genuinely available.
+
+### Fix: length has been drifting well past the one-page limit
+The Lithic and Alpaca letters run to roughly two pages against this guide's **250-300 word**
+body budget. Alpaca stacks six bold-label paragraphs plus three closing paragraphs. The
+**Agoda letter is the model**: four tight paragraphs, one page, still specific. When adapting
+an older letter, cut to the Agoda shape rather than inheriting the older length.
+
+### Fix: filler openers in the older letters
+Lithic, Alpaca, and Pulley all open with "I am writing to express my strong interest in..."
+Critical Rule 2 classes this as filler. Agoda's opener does the same work with specificity.
+Do not carry the older opener into new drafts.
+
+### Fix: unverified superlatives in the older letters
+The archived Alpaca letter contains two claims that are not supported by any source document
+("millions of dollars in transactions daily"; "Brazil's first integrated digital banking
+solution"). See the "Claims that must NOT be used" section of `01-candidate-profile.md` for
+the verified, narrower wording. When reusing phrasing from an archived letter, re-check every
+factual claim against the profile - a past letter does not vouch for its own accuracy.
+
+### Note: em-dash usage in archived letters
+Several archived letters use em-dashes, which Critical Rule 1 forbids. The rule stands;
+the archives predate it.
