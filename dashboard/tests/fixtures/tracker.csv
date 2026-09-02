@@ -1,0 +1,7 @@
+date,company,sector,role,role_type,channel,status,contact_person,fit_rating,notes,cv_file,cover_letter_file,source
+"2026-08-01","Acme Corp","FinTech","Senior Backend Engineer","Backend Engineer","portal","applied","Jane Doe","80","2026-08-01 applied via portal.","cv/main_acme.tex","cover_letters/cover_acme.tex","https://example.com/job/1"
+"2026-07-10","Beta LLC","SaaS","Staff Engineer","Backend Engineer","recruiter_outreach","interview","John Smith","75","2026-07-10 recruiter outreach. 2026-07-20 phone screen done. followed up 2026-07-25.","","",""
+"2026-08-15","Gamma Inc","HealthTech","Backend Dev","Backend Engineer","online","drafted","","88","2026-08-15 documents drafted, not sent.","","",""
+"2026-06-01","Delta SA","Banking","Java Engineer","Backend Engineer","portal","no_response","","60","2026-06-01 applied. followed up 2026-06-15. followed up 2026-06-29.","","",""
+"2026-08-10","Epsilon Oy","Gaming","Platform Engineer","Platform Engineer","portal","applied","","","2026-08-10 applied, notes with ""quoted, commas"" and
+a multi-line note.","","",""
