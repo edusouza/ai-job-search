@@ -25,6 +25,8 @@ Secondary (company career pages via Google):
 
 Queries are grouped by priority. Write **each category in both English and Portuguese**. Because the hard constraint is **fully remote**, pair every query with a remote term rather than a city.
 
+**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
+
 ### Priority 1: Senior / Staff Backend Engineer (remote)
 
 The strongest and most desired direction: hands-on IC backend work, Kotlin/Java, remote.
